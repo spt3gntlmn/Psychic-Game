@@ -14,3 +14,14 @@ h2 {
     text-align: center;
     font-size: 24px;
 }
+container {
+    background-image: url("../images/psychic-img.jpg");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: 50%;
+ }
+
+ p {
+     /* color: white; */
+     font-size: 22px;
+ }
