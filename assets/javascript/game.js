@@ -7,8 +7,8 @@ var guessesLeft = 9;
 var lettersGuessed = [];
 var guessingLetter = null;
 
-var computerGuess = comChoice[Math.floor(Math.random() * comChoice.length)];
-document.write(computerGuess);
+// var computerGuess = comChoice[Math.floor(Math.random() * comChoice.length)];
+// document.write(computerGuess);
 
 var updateGuessesLeft = function() {
     
@@ -17,6 +17,7 @@ var updateGuessesLeft = function() {
 
 var updateLetterToGuess = function() {
   this.letterToGuess = this.comChoice[Math.floor(Math.random() * this.comChoice.length)];
+  console.log(this.letterToGuess);
 };
 var updateGuessesSoFar = function() {
   document.querySelector('#guessSoFar').innerHTML = "Guesses so far: " + lettersGuessed.join(', ');
@@ -44,7 +45,7 @@ document.onkeyup = function(event) {
   updateGuessesSoFar();
 
         if (guessesLeft > 0){
-            if (userGuess == computerGuess){
+            if (userGuess == letterToGuess){
                 wins++;
                 document.querySelector('#wins').innerHTML = "Wins: " + wins;
                 reset();
